@@ -25,7 +25,9 @@ function checkYams(dice) {
 function calculateChance(dice) {
     return dice.reduce((sum, val) => sum + val, 0);
 }
-
+function evaluateDice(dice) {
+    return Math.max(checkBrelan(dice), checkCarre(dice), checkFull(dice), checkGrandeSuite(dice), checkYams(dice), calculateChance(dice));
+}
 module.exports = {
     checkBrelan,
     checkCarre,
@@ -33,4 +35,5 @@ module.exports = {
     checkGrandeSuite,
     checkYams,
     calculateChance,
+    evaluateDice,
 };
