@@ -11,7 +11,12 @@ function checkBrelan(dice) {
 function checkCarre(dice) {
     return Object.values(countDiceValues(dice)).some(count => count === 4) ? 35 : 0;
 }
+function checkFull(dice) {
+    const occurrences = countDiceValues(dice);
+    return Object.values(occurrences).includes(3) && Object.values(occurrences).includes(2) ? 30 : 0;
+}
 module.exports = {
     checkBrelan,
     checkCarre,
+    checkFull,
 };
