@@ -26,3 +26,7 @@ test('identifie un Yams', () => {
     expect(checkYams([4, 4, 4, 4, 4])).toBe(50);
     expect(checkYams([1, 1, 1, 1, 2])).toBe(0);
 });
+test('calcule la Chance', () => {
+    expect(calculateChance([1, 2, 3, 4, 5])).toBe(15);
+    expect(calculateChance([6, 6, 6, 6, 6])).toBe(30);
+});
