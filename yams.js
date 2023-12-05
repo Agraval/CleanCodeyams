@@ -19,9 +19,14 @@ function checkGrandeSuite(dice) {
     const sortedDice = dice.slice().sort((a, b) => a - b);
     return sortedDice.every((val, idx, arr) => idx === 0 || val === arr[idx - 1] + 1) ? 40 : 0;
 }
+function checkYams(dice) {
+    return dice.every(val => val === dice[0]) ? 50 : 0;
+}
+
 module.exports = {
     checkBrelan,
     checkCarre,
     checkFull,
     checkGrandeSuite,
+    checkYams,
 };

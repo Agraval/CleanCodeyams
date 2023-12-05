@@ -3,6 +3,7 @@ const {
     checkCarre,
     checkFull,
     checkGrandeSuite,
+    checkYams,
 } = require('./yams');
 
 test('identifie un Brelan', () => {
