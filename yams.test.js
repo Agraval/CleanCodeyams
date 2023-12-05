@@ -1,6 +1,7 @@
 const {
     checkBrelan,
     checkCarre,
+    checkFull,
 } = require('./yams');
 
 test('identifie un Brelan', () => {
@@ -10,5 +11,9 @@ test('identifie un Brelan', () => {
 test('identifie un Carré', () => {
     expect(checkCarre([2, 2, 2, 2, 5])).toBe(35);
     expect(checkCarre([1, 2, 3, 4, 5])).toBe(0);
+});
+test('identifie un Full', () => {
+    expect(checkFull([1, 1, 2, 2, 2])).toBe(30);
+    expect(checkFull([1, 2, 3, 4, 5])).toBe(0);
 });
 
