@@ -15,8 +15,13 @@ function checkFull(dice) {
     const occurrences = countDiceValues(dice);
     return Object.values(occurrences).includes(3) && Object.values(occurrences).includes(2) ? 30 : 0;
 }
+function checkGrandeSuite(dice) {
+    const sortedDice = dice.slice().sort((a, b) => a - b);
+    return sortedDice.every((val, idx, arr) => idx === 0 || val === arr[idx - 1] + 1) ? 40 : 0;
+}
 module.exports = {
     checkBrelan,
     checkCarre,
     checkFull,
+    checkGrandeSuite,
 };
