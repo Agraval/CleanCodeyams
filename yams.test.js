@@ -21,3 +21,7 @@ test('identifie une Grande Suite', () => {
     expect(checkGrandeSuite([1, 2, 3, 4, 5])).toBe(40);
     expect(checkGrandeSuite([1, 1, 1, 2, 3])).toBe(0);
 });
+test('identifie un Yams', () => {
+    expect(checkYams([4, 4, 4, 4, 4])).toBe(50);
+    expect(checkYams([1, 1, 1, 1, 2])).toBe(0);
+});
