@@ -4,6 +4,7 @@ const {
     checkFull,
     checkGrandeSuite,
     checkYams,
+    calculateChance,
 } = require('./yams');
 
 test('identifie un Brelan', () => {

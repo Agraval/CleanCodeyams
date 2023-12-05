@@ -22,6 +22,9 @@ function checkGrandeSuite(dice) {
 function checkYams(dice) {
     return dice.every(val => val === dice[0]) ? 50 : 0;
 }
+function calculateChance(dice) {
+    return dice.reduce((sum, val) => sum + val, 0);
+}
 
 module.exports = {
     checkBrelan,
@@ -29,4 +32,5 @@ module.exports = {
     checkFull,
     checkGrandeSuite,
     checkYams,
+    calculateChance,
 };
